@@ -1,0 +1,29 @@
+{
+  "name": "mod-maker-cli",
+  "version": "1.0.0",
+  "description": "CLI for react projects. Generate hooks, services and feactures modules with a simples steps.",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "node ./src/index.js"
+  },
+  "bin": {
+    "mod-maker": "./src/index.js"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "cli",
+    "module",
+    "maker",
+    "template",
+    "typescript",
+    "projects",
+    "feactures"
+  ],
+  "author": "Luis Angel Fernandez Concepcion",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^13.0.2"
+  }
+}
