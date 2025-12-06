@@ -11,7 +11,7 @@ import {
 } from "./commands/my-cmd.js";
 
 const main = async () => {
-  console.log("⚛️ Welcome to mod-maker cli ⚛️".toUpperCase());
+  console.log("Welcome to mod-maker CLI ⚛️");
   try {
     const answers = await inquirer.prompt([
       {
