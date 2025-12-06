@@ -5,7 +5,7 @@ export const templateService = (name) => {
 
 export const get${capitalizeString(name)} = async () => {
   try {
-    const response = await axios.get("http://localhost:3000/api/v1/employee");
+    const response = await axios.get("http://localhost:3000/api/v1/${name.toLowerCase()}");
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) console.log(error);
@@ -14,7 +14,7 @@ export const get${capitalizeString(name)} = async () => {
 
 export const post${capitalizeString(name)} = async () => {
   try {
-    const response = await axios.post("http://localhost:3000/api/v1/employee");
+    const response = await axios.post("http://localhost:3000/api/v1/${name.toLowerCase()}");
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) console.log(error);
@@ -23,7 +23,7 @@ export const post${capitalizeString(name)} = async () => {
 
 export const put${capitalizeString(name)} = async () => {
   try {
-    const response = await axios.put("http://localhost:3000/api/v1/employee");
+    const response = await axios.put("http://localhost:3000/api/v1/${name.toLowerCase()}");
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) console.log(error);
@@ -33,7 +33,7 @@ export const put${capitalizeString(name)} = async () => {
 export const delete${capitalizeString(name)}= async () => {
   try {
     const response = await axios.delete(
-      "http://localhost:3000/api/v1/employee"
+      "http://localhost:3000/api/v1/${name.toLowerCase()}"
     );
     return response.data;
   } catch (error) {
