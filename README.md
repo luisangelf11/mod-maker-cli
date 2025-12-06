@@ -1,6 +1,12 @@
 # ⚛️ MOD-MAKER CLI
 
-**Mod-Maker CLI** es una herramienta de *scaffolding* (andamiaje) diseñada para desarrolladores de React/Frontend que utilizan una arquitectura orientada a **features** (características). Permite generar rápidamente estructuras de código como *features*, componentes, páginas, servicios y *hooks* con una sola línea de comando, promoviendo la consistencia y la organización en proyectos grandes.
+**Mod-Maker CLI** es una herramienta de _scaffolding_ (andamiaje) diseñada para desarrolladores de React/Frontend que utilizan una arquitectura orientada a **features** (características). Permite generar rápidamente estructuras de código como _features_, componentes, páginas, servicios y _hooks_ con una sola línea de comando, promoviendo la consistencia y la organización en proyectos grandes.
+
+Puedes apoyarme en GitHub dandole una ⭐ estrella a mi repositorio.
+
+```bash
+https://github.com/luisangelf11/mod-maker-cli
+```
 
 ---
 
@@ -15,6 +21,7 @@ npm install mod-maker-cli --save-dev
 # Con yarn
 yarn add mod-maker-cli -D
 ```
+
 ## 🛠️ Uso Básico
 
 Una vez instalado, puedes ejecutar el CLI directamente desde tu terminal dentro de la carpeta raíz de tu proyecto:

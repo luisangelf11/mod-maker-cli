@@ -1,6 +1,6 @@
 {
   "name": "mod-maker-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI for react projects. Generate hooks, services and feactures modules with a simples steps.",
   "main": "./src/index.js",
   "scripts": {

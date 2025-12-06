@@ -5,7 +5,7 @@ export const templateJsx = (name, isPage) => {
     ? `${capitalizeString(name)}Page`
     : capitalizeString(name);
 
-  return `export default function ${capitalizeString(title)}() {
+  return `export default function ${title}() {
   return (
     <div>
       <h1>Hello world from client ⚛️</h1>
