@@ -149,6 +149,7 @@ export const feactureAOption = (name, lang, targetPath) => {
     "types",
     "constants",
     "styles",
+    "helpers",
   ];
 
   const exist = fs.existsSync(filePathModule);
@@ -205,4 +206,78 @@ export const feactureBOption = (name, lang, targetPath) => {
   hookByFeacture(name, lang, `${filePathModule}/hooks`);
 
   setTimeout(() => console.log("The feacture was created!🚀"), 1500);
+};
+
+//ATOMIC ARQUITECTURE
+
+export const atomicOption = (name, lang, targetPath) => {
+  console.log("Initializing atomic architecture ⚛️");
+  const files = ["/atoms", "/molecules", "/organisms", "/templates"];
+
+  const filePathModule = join(targetPath, `src`);
+  const exitsComponent = fs.existsSync(join(filePathModule, "/components"));
+
+  //Generate components directory
+  if (exitsComponent) {
+    files.forEach((path) => {
+      fs.mkdirSync(join(filePathModule, `/components${path}`), {
+        recursive: true,
+      });
+    });
+  } else {
+    fs.mkdirSync(join(filePathModule, "/components"), {
+      recursive: true,
+    });
+    files.forEach((path) => {
+      fs.mkdirSync(join(filePathModule, `/components${path}`), {
+        recursive: true,
+      });
+    });
+  }
+
+  //Folder feacture
+  fs.mkdirSync(join(filePathModule, "/feacture"), {
+    recursive: true,
+  });
+
+  //Generate feacture
+  console.log(`Creating new feacture: ${name} ⚛️`);
+
+  const nameLower = name.toLowerCase();
+  const filePathFeacture = join(targetPath, `src/feacture/${nameLower}`);
+  const allPaths = [
+    "components",
+    "pages",
+    "services",
+    "hooks",
+    "interfaces",
+    "types",
+    "constants",
+    "styles",
+    "helpers",
+  ];
+
+  const exist = fs.existsSync(filePathFeacture);
+
+  if (exist)
+    return console.log(
+      `This feacture exist in this project. Please write other name👀`
+    );
+
+  fs.mkdirSync(join(filePathFeacture), {
+    recursive: true,
+  });
+
+  allPaths.forEach((path) => {
+    fs.mkdirSync(join(filePathFeacture, path), {
+      recursive: true,
+    });
+  });
+
+  componentByFeacture(name, lang, `${filePathFeacture}/components`);
+  pageByFeacture(name, lang, `${filePathFeacture}/pages`);
+  serviceByFeacture(name, lang, `${filePathFeacture}/services`);
+  hookByFeacture(name, lang, `${filePathFeacture}/hooks`);
+
+  setTimeout(() => console.log("The atomic architecture was created!🚀"), 1500);
 };

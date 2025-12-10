@@ -8,6 +8,7 @@ import {
   serviceOption,
   feactureAOption,
   feactureBOption,
+  atomicOption,
 } from "./commands/my-cmd.js";
 
 const main = async () => {
@@ -18,7 +19,7 @@ const main = async () => {
         type: "select",
         name: "projectType",
         message: "What do you want to create ⚛️: ",
-        choices: ["feacture-A", "feacture-B", "component", "page", "service", "hook"],
+        choices: ["feacture-A", "feacture-B", "atomic-arc", "component", "page", "service", "hook"],
       },
       {
         type: "input",
@@ -46,6 +47,8 @@ const main = async () => {
     if (projectType === "feacture-A") feactureAOption(name, lang, targetPath);
 
     if (projectType === "feacture-B") feactureBOption(name, lang, targetPath);
+
+    if (projectType === "atomic-arc") atomicOption(name, lang, targetPath);
 
     if (projectType === "component") componentOption(name, lang, targetPath);
 
