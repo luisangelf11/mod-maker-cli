@@ -30,6 +30,24 @@ Una vez instalado, puedes ejecutar el CLI directamente desde tu terminal dentro 
 npx mod-maker
 ```
 
+## ⭐ Comandos
+
+- __feacture-A:__ Genera una estructura de carpetas basada en feacture, creando las carpetas de components, pages, services, hooks, interfaces, types, constants, styles y helpers.
+
+- __feacture-B:__ Es una versión más básica del anterior, el cual solo crea las carpetas de components, pages, interfaces, hooks y services.
+
+- __atomic-arc-A:__ Genera la estructura base de una arquitectura atómica. Dentro de la carpeta de components crea las subcarpetas atoms, molecules, organisms y templates. Además, genera una carpeta feacture para agrupar cada uno de los módulos a generar, creando dentro de esta carpeta la estructura del feacture-A.
+
+- __atomic-arc-B:__ Genera la estructura base de una arquitectura atómica. Dentro de la carpeta de components crea las subcarpetas atoms, molecules, organisms y templates. Además, genera una carpeta feacture para agrupar cada uno de los módulos a generar, creando dentro de esta carpeta la estructura del feacture-B.
+
+- __component:__ Crea el archivo con un template de un  componente dentro de ./src/components.
+
+- __page:__ Crea el archivo con un template de una página dentro de ./src/pages.
+
+- __service:__ Crea el archivo con un template de un servicio configurado con Axios dentro de ./src/services.
+
+- __hook:__ Crea el archivo con un template de un hook dentro de ./src/hooks.
+
 ## 👨‍💻 Contribuciones
 
 Si tienes sugerencias o quieres mejorar la herramienta (por ejemplo, añadiendo más opciones de feature o templates), ¡eres bienvenido! Por favor, abre un issue o envía un pull request.
