@@ -109,7 +109,7 @@ export const hookOption = (name, lang, targetPath) => {
 
   const filePath = join(
     targetPath,
-    `src/hooks/${name.toLowerCase()}${getExtension(lang, false)}`
+    `src/hooks/use${capitalizeString(name)}${getExtension(lang, false)}`
   );
 
   const directoryPath = dirname(filePath);
@@ -127,7 +127,7 @@ export const hookOption = (name, lang, targetPath) => {
 export const hookByFeacture = (name, lang, targetPath) => {
   const filePath = join(
     targetPath,
-    `${name.toLowerCase()}${getExtension(lang, false)}`
+    `use${capitalizeString(name)}${getExtension(lang, false)}`
   );
   console.log(`Creating new hook: ${name} ⚛️`);
   fs.writeFileSync(filePath, `${templateHook(name)}`, "utf8");
